@@ -39,10 +39,22 @@ The options used where:
    
    **Implementation:**
 
-   These classes attend the requirement
+   These classes accomplish the requirement
    
    ```
-   com.asurint.urlslugbe.utilities.IUrlSlugConverter: The abstract logic use
+   com.asurint.urlslugbe.utilities.IUrlSlugConverter:
+     The abstract logic use
    
-   com.asurint.urlslugbe.utilities.UrlSlugConverterTest: The logic tests
+   com.asurint.urlslugbe.utilities.UrlSlugConverterTest:
+     The logic tests
+   
+   com.asurint.urlslugbe.utilities.EfficientUrlSlugConverter:
+     Efficient option
+   
+   com.asurint.urlslugbe.utilities.RegExpUrlSlugConverter:
+     Easy to maintain option
    ```
+
+   **Future Work:**
+   
+   Add Aspect Oriented Programming to remove noise in the code.

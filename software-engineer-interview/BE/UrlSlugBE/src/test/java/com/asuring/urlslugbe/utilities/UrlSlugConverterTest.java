@@ -3,6 +3,9 @@ package com.asuring.urlslugbe.utilities;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
 import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
@@ -10,11 +13,21 @@ import lombok.extern.slf4j.Slf4j;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 @Slf4j
+@SpringBootTest
 public class UrlSlugConverterTest {
+
+    @Autowired
+    IUrlSlugConverter efficientUrlSlugConverter;
+
+    @Autowired
+    IUrlSlugConverter regExpUrlSlugConverter;
 
     @Test
     public void covertToSlugTest() {
-        Collection<IUrlSlugConverter> iUrlSlugConverters = Arrays.asList();
+        Collection<IUrlSlugConverter> iUrlSlugConverters = Arrays.asList(
+                efficientUrlSlugConverter,
+                regExpUrlSlugConverter
+        );
 
         Map<String, String> testCases = new HashMap<>();
         testCases.put("Aunt Millie's & Co., Inc.", "aunt-millies-and-co-inc");
