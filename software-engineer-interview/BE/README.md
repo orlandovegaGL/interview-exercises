@@ -16,3 +16,33 @@ The options used where:
   - Spring Data JPA
   - Spring Web
   - H2 Database
+
+## Requirements
+
+1. **Generate URL slugs based on a description**
+
+   Create a function that can generate URL-friendly "slugs" from a description of a website.
+
+   Invalid characters should be removed, and words should be separated using a dash, e.g.
+
+   ```
+   "Aunt Millie's & Co., Inc.” -> "aunt-millies-and-co-inc"
+   ```
+
+   This function should also replace the following special characters with their English counterparts:
+
+   - & -> and
+   - @ -> at
+   - % -> percent
+
+   All other special characters should be removed. The output should never result in multiple consecutive dash separators, or dash separators at the beginning or end of the result.
+   
+   **Implementation:**
+
+   These classes attend the requirement
+   
+   ```
+   com.asurint.urlslugbe.utilities.IUrlSlugConverter: The abstract logic use
+   
+   com.asurint.urlslugbe.utilities.UrlSlugConverterTest: The logic tests
+   ```
