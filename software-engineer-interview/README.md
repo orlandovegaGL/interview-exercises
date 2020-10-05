@@ -54,3 +54,69 @@
 5. **Dockerize it (Bonus)**
 
    Create a Dockerfile and run this/these service(s) in a container.
+
+# Do you want to run the project?
+
+This project uses docker-compose... so to launch the app, please do the following steps:
+
+1. Ensure you have Docker and Docker Compose installed.
+2. Open a terminal and go to the folder named "software-engineer-interview".
+3. Execute:
+
+```
+docker-compose -d up
+```
+
+to stop it, in the same folder, execute:
+
+```
+docker-compose down
+```
+
+5. **Dockerize it (Bonus)**
+
+   Create a Dockerfile and run this/these service(s) in a container.
+
+   **Implementation:**
+
+   There are two Dockerfiles, one for BE in: ./BE/Dockerfile, and the other for FE in: ./FE/Dockerfile
+
+   There is a docker-compose file to use both Dockerfiles mentioned above.
+
+   **Future Work:**
+   
+   Use a Docker Orchestrator tool.
+
+# Do you want to work in the BE code?
+
+The BE project is in the "BE/UrlSlugBE" subfolder, it uses Spring Boot, so...
+
+You can run it by:
+
+```
+./mvnw spring-boot:run
+```
+
+You can execute the unit testers by:
+
+```
+./mvnw clean test
+```
+
+For more details about the BE project, please go to its [README](./BE/README.md) file.
+
+# Do you want to work in the FE code?
+
+The FE project is in the "FE/urlslugfe" subfolder, it uses node and npm.
+
+The project was created with create-react-app tool, so...
+
+You can run it by:
+
+```
+npm install
+
+npm start
+```
+
+For more details about the FE project, please go to its [README](./FE/README.md) file.
