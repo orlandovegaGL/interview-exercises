@@ -58,3 +58,23 @@ The options used where:
    **Future Work:**
    
    Add Aspect Oriented Programming to remove noise in the code.
+
+2. **Create an API that creates and stores URLs and slugs of their descriptions**
+
+   The goal of this step is to expose an endpoint through which a website's URL and a description of the website can be saved. The description should be turned into a slug using the generation function written in step 1 and stored with the URL. We will use this data in step 3 to redirect GET requests for the slug to the registered URL.
+
+   - The API endpoint should accept both a description string (eg. “Aunt Millie's & Co., Inc.”) and the URL for the site being described (e.g. http://auntmilliescookieemporium.com) in a request.
+   - The API should respond with the slug that was generated using the function built in step 1.
+   - The URL and the generated slug should somehow be persisted for future use - in-memory persistence is sufficient.
+
+   **Implementation:**
+
+   These classes accomplish the requirement
+   
+   ```
+   com.asuring.urlslugbe.entities.UrlSlugConversion:
+     The persistent entity
+   
+   com.asuring.urlslugbe.repositories.IUrlSlugConversionRepository:
+     The entity's repository
+   ```
