@@ -26,4 +26,10 @@ This project has been created using the create-react-app tool
    
    src/components/table:
      Contains components to display content in a table format
+   
+   src/api:
+     Contains javascript files to asynchronously interact with the BE API
+   
+   .env.development, .env.development:
+     Files to configure the BE API's URL. They are located in the project's root folder
    ```
