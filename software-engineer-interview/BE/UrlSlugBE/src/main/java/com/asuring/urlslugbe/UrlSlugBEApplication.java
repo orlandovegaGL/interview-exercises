@@ -20,7 +20,7 @@ public class UrlSlugBEApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/*")
-						.allowedOrigins("http://localhost:3000", "http://urlslugfe:5000");
+						.allowedOrigins("http://localhost:3000", "http://localhost:5000");
 			}
 		};
 	}

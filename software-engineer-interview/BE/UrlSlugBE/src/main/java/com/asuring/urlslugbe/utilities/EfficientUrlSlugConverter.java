@@ -37,7 +37,7 @@ public class EfficientUrlSlugConverter implements IUrlSlugConverter {
                 case '\n': // Don't break on purpose
                 case '\r': // Don't break on purpose
                     // Keep just one dash
-                    if (!stringBuilder.isEmpty() &&
+                    if (stringBuilder.length() != 0 &&
                             stringBuilder.charAt(stringBuilder.length() - 1) != '-') {
                         stringBuilder.append('-');
                     }
