@@ -77,4 +77,55 @@ The options used where:
    
    com.asuring.urlslugbe.repositories.IUrlSlugConversionRepository:
      The entity's repository
+   
+   com.asuring.urlslugbe.dtos.ConversionGetResponseElement:
+     DTO to respond the GET request
+   
+   com.asuring.urlslugbe.dtos.ConversionPostResponse:
+     DTO to respond the POST request
+   
+   com.asuring.urlslugbe.dtos.ConversionPostRequest:
+     DTO to receive the information in the POST request
+   
+   com.asuring.urlslugbe.controllers.UrlSlugConversionController:
+     Rest controller for path: /urlSlugConversions (GET|POST)
    ```
+   
+   **API Documentation**
+   
+   - Service GET /urlSlugConversions:
+        - Parameter Format: None
+        - Parameters: None
+        - Response Format: JSON
+        - Response:
+        ```
+        [
+          {
+            "id": 1,
+            "description": "stored description 1"
+            "slug": "stored-description-1"
+          },
+          {
+            "id": 2,
+            "description": "stored description 2"
+            "slug": "stored-description-2"
+          }
+        ]
+        ```
+   - Service POST /urlSlugConversions:
+        - Parameter Format: JSON
+        - Parameters:
+        ```
+        {
+          "url": "http://www.url.com",
+          "description": "description to store"
+        }
+        ```
+        - Response Format: JSON
+        - Response:
+        ```
+        {
+          "id": 1,
+          "slug": "description-to-store"
+        }
+        ```
