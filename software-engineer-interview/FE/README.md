@@ -27,6 +27,9 @@ This project has been created using the create-react-app tool
    src/components/table:
      Contains components to display content in a table format
    
+   src/containers:
+     Contains specific components for this application
+   
    src/api:
      Contains javascript files to asynchronously interact with the BE API
    
