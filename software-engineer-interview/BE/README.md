@@ -170,3 +170,9 @@ The options used where:
         - Response: Redirect to the url associated with the slug
         - Errors:
           - HTTP 400 status if the slug does not exist
+
+   **Future Work:**
+   
+   Add Spring Security to include authentication.
+   
+   Add a Proxy in the FE server to exclude the CORS configuration.
