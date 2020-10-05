@@ -12,6 +12,7 @@ import com.asuring.urlslugbe.dtos.ConversionGetResponseElement;
 import com.asuring.urlslugbe.dtos.ConversionPostRequest;
 import com.asuring.urlslugbe.dtos.ConversionPostResponse;
 import com.asuring.urlslugbe.entities.UrlSlugConversion;
+import com.asuring.urlslugbe.exceptions.InvalidParametersException;
 import com.asuring.urlslugbe.repositories.IUrlSlugConversionRepository;
 import com.asuring.urlslugbe.utilities.IUrlSlugConverter;
 
@@ -48,11 +49,11 @@ public class UrlSlugConversionController {
 
         // ToDo: Use Bean Validation instead
         if (!StringUtils.hasText(url) || !url.matches("^https?:\\/\\/[^\\s$.?#].[^\\s]*$")) {
-            // ToDo: Throw exception
+            throw new InvalidParametersException();
         }
 
         if (!StringUtils.hasText(description)) {
-            // ToDo: Throw exception
+            throw new InvalidParametersException();
         }
 
         String slug = efficientUrlSlugConverter.convertToSlug(description);

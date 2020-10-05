@@ -89,6 +89,12 @@ The options used where:
    
    com.asuring.urlslugbe.controllers.UrlSlugConversionController:
      Rest controller for path: /urlSlugConversions (GET|POST)
+   
+   com.asuring.urlslugbe.exceptions.InvalidParametersException:
+     Custom exception to catch invalid parameters
+   
+   com.asuring.urlslugbe.exceptions.RestExceptionCatcher:
+     Class to map Java Exception to REST responses
    ```
    
    **API Documentation**
@@ -129,3 +135,10 @@ The options used where:
           "slug": "description-to-store"
         }
         ```
+        - Errors:
+          - HTTP 400 status if url is invalid or empty
+          - HTTP 400 status if description is empty
+          
+   **Future Work:**
+   
+   Add Bean Validation
