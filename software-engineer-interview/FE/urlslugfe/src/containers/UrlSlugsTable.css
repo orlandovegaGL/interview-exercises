@@ -1,0 +1,42 @@
+.table {
+  display: table;
+  width: 80%;
+}
+
+.table-caption {
+  display: table-caption;
+  text-align: left;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+}
+
+.table-header {
+  display: table-header-group;
+  background-color: #61dafb;
+  color: black;
+  font-size: calc(10px + 0.5vmin);
+}
+
+.table-header-cell {
+  display: table-cell;
+  padding: 10px;
+}
+
+.table-body {
+  display: table-row-group;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-row .cell {
+  display: table-cell;
+  border-bottom: 1px solid black;
+  background-color: gray;
+  padding-bottom: 5px;
+}
+
+.cell-link a {
+  color: #61dafb;
+}

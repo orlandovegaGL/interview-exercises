@@ -36,3 +36,7 @@ This project has been created using the create-react-app tool
    .env.development, .env.development:
      Files to configure the BE API's URL. They are located in the project's root folder
    ```
+   
+   **Future Work:**
+   
+   Add some CSS framework like Bootstrap or Material UI. To improve a lot of things like error messages and validations display.

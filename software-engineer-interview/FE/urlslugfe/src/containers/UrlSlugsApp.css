@@ -1,0 +1,18 @@
+.title {
+  margin-bottom: 50px;
+}
+
+.loading {
+  width: 400px;
+  height: 300px;
+  margin: 50px;
+  background-image: url("/loading.gif");
+  background-size: contain;
+}
+
+.errorsList {
+  width: 90%;
+  text-align: left;
+  color: lightcoral;
+  font-size: calc(10px + 0.5vmin);
+}
