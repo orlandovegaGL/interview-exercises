@@ -142,3 +142,31 @@ The options used where:
    **Future Work:**
    
    Add Bean Validation
+
+3. **Add an endpoint to the service that uses the slug to redirect to the registered website**
+
+   Enhance the previously created API to host another endpoint that redirects requests for the generated slug to the URL that was submitted with the description in Step 2.
+
+   For example, if we first call the API with the description “Aunt Millie's & Co., Inc.” and URL http://auntmilliescookieemporium.com, and we have generated the slug “aunt-millies-and-co-inc”, then a request sent to this endpoint with "aunt-millies-and-co-inc" will redirect the user's browser to http://auntmilliescookieemporium.com.
+
+   **Implementation:**
+
+   These classes accomplish the requirement
+   
+   ```
+   com.asuring.urlslugbe.controllers.UrlSlugConversionController:
+     Rest controller for path: /slugRedirect/{pathParameter}
+   
+   com.asuring.urlslugbe.repositories.IUrlSlugConversionRepository:
+     This class has been adapt to find the URL by slug
+   ```
+
+   **API Documentation**
+
+   - Service POST /slugRedirect/{pathParameter}:
+        - Parameter Format: String inside the URL
+        - Parameters: pathParameter which is the slug
+        - Response Format: HTTP redirect
+        - Response: Redirect to the url associated with the slug
+        - Errors:
+          - HTTP 400 status if the slug does not exist
